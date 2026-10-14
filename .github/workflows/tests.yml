@@ -1,0 +1,23 @@
+name: Windows tests
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check public files
+        run: python -X utf8 scripts/check_public_files.py
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Run tests without API keys or live WeChat
+        run: python -X utf8 -m unittest -q test_wechat_ai.py test_runtime.py test_wechat_lock.py test_wechat_style.py test_public_files.py

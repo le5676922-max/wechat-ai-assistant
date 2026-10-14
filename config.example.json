@@ -1,0 +1,13 @@
+{
+  "allowed_friends": ["请改成好友的微信备注"],
+  "model": "auto",
+  "vision_model": "auto",
+  "style": "自然、简短、像日常微信聊天，不油腻",
+  "display_name": "用户本人",
+  "real_name": "",
+  "poll_seconds": 0.5,
+  "max_pages": 3,
+  "max_messages_per_batch": 5,
+  "max_reply_chars": 120,
+  "ai_disclosure": "（AI助手代回）"
+}

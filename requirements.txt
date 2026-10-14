@@ -1,0 +1,4 @@
+openai>=2.0,<3
+python-dotenv>=1.0,<2
+Pillow>=10,<13
+pywechat127 @ https://github.com/Hello-Mr-Crab/pywechat/archive/8589baa049bb91d3a500602c167f07b2f8397a13.zip#subdirectory=src
